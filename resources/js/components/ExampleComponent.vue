@@ -2,14 +2,14 @@
   <div class="container">
     <div class="main">
       <div class="main__header">10 Best Photo Apps For Incredible iPhone Photography (2020 Edition)</div>
-      <img src="../../../public/images/line.svg" class="main__line">
+      <img src="../../../public/images/imgs/line.svg" class="main__line">
       <p
         class="main__text"
       >How do you capture more interesting travel photos with your iPhone? How do you avoid taking the same cliché vacation photos that everyone else takes? I recently interviewed Steffen Geldner – a talented iPhone photographer with a passion for travel. In this article, Steffen reveals 7 tips for shooting beautiful travel photos that will preserve the amazing memories of your trip. Read on to discover how to take better travel photos with your iPhone!</p>
       <img
         class="main__image"
-        src="../../../public/images/main__image.png"
-        srcset="../../../public/images/main__image@2x.png 2x, ../../../public/images/main__image@3x.png 3x"
+        src="../../../public/images/imgs/main__image.png"
+        srcset="../../../public/images/imgs/main__image@2x.png 2x, ../../../public/images/imgs/main__image@3x.png 3x"
       >
       <div class="main__subheader">1. Research Your Destination To Find The Best Photo Opportunities</div>
       <p
@@ -49,15 +49,25 @@
       >Whether you’re traveling by car, taxi, bus, train, boat, or plane, try to capture some interesting photos.</p>
     </div>
     <div class="sidebar">
-      <button class="sidebar__button">Send Me The Tips »</button>
+      <button @click="togglePopup()" class="sidebar__button">Send Me The Tips »</button>
     </div>
+    <popup v-if="popupOpen" @close="togglePopup()"/>
   </div>
 </template>
 
 <script>
+import popup from "./Popup.vue";
 export default {
-  mounted() {
-    console.log("Component mounted.");
+  components: {
+    popup
+  },
+  data: () => ({
+    popupOpen: false
+  }),
+  methods: {
+    togglePopup() {
+      this.popupOpen = !this.popupOpen;
+    }
   }
 };
 </script>
@@ -68,8 +78,10 @@ export default {
 }
 .main {
   width: 560px;
+  margin-top: 76px;
 }
 .sidebar {
+  margin-top: 154px;
   margin-left: 70px;
   width: 270px;
   height: 640px;
@@ -93,6 +105,7 @@ export default {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
+  margin: 28px 0 28px 0;
   color: #101010;
 }
 .main__subheader {
@@ -117,6 +130,7 @@ export default {
   background: linear-gradient(90deg, #b678aa 1.29%, #e28990 100%);
 }
 .main__image {
+  margin-bottom: 44px;
   width: 100%;
   height: 331px;
 }

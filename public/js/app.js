@@ -1908,6 +1908,7 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Popup_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Popup.vue */ "./resources/js/components/Popup.vue");
 //
 //
 //
@@ -1930,6 +1931,69 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    popup: _Popup_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      popupOpen: false
+    };
+  },
+  methods: {
+    togglePopup: function togglePopup() {
+      this.popupOpen = !this.popupOpen;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Popup.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Popup.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 //
 //
 //
@@ -1965,8 +2029,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log("Component mounted.");
+  data: function data() {
+    return {
+      valid: true,
+      inputMail: "",
+      labelText: "Please enter your email here"
+    };
+  },
+  methods: {
+    close: function close() {
+      this.$emit("close");
+    },
+    validateForm: function validateForm() {
+      if (!/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(this.inputMail)) {
+        this.labelText = "Please enter a valid email adress";
+        this.valid = false;
+      } else {
+        this.labelText = "Please enter your email here";
+        this.valid = true;
+        this.close();
+      }
+    }
   }
 });
 
@@ -6414,7 +6497,27 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n* {\n  font-family: \"Lato\";\n}\n.main {\n  width: 560px;\n}\n.sidebar {\n  margin-left: 70px;\n  width: 270px;\n  height: 640px;\n  background-color: #f5f5f5;\n  display: flex;\n  justify-content: center;\n}\n.container {\n  display: flex;\n  flex-flow: row;\n  justify-content: center;\n}\n.main__header {\n  font-style: normal;\n  font-weight: bold;\n  font-size: 26px;\n  line-height: 31px;\n  color: #101010;\n}\n.main__text {\n  font-weight: 300;\n  font-size: 16px;\n  line-height: 24px;\n  color: #101010;\n}\n.main__subheader {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 22px;\n  color: #101010;\n}\n.sidebar__button {\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n  box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);\n  width: 220px;\n  height: 40px;\n  font-weight: bold;\n  font-size: 15px;\n  line-height: 18px;\n  color: #ffffff;\n  border: none !important;\n  margin-top: 50px;\n}\n.sidebar__button:hover {\n  background: linear-gradient(90deg, #b678aa 1.29%, #e28990 100%);\n}\n.main__image {\n  width: 100%;\n  height: 331px;\n}\n", ""]);
+exports.push([module.i, "\n* {\n  font-family: \"Lato\";\n}\n.main {\n  width: 560px;\n  margin-top: 76px;\n}\n.sidebar {\n  margin-top: 154px;\n  margin-left: 70px;\n  width: 270px;\n  height: 640px;\n  background-color: #f5f5f5;\n  display: flex;\n  justify-content: center;\n}\n.container {\n  display: flex;\n  flex-flow: row;\n  justify-content: center;\n}\n.main__header {\n  font-style: normal;\n  font-weight: bold;\n  font-size: 26px;\n  line-height: 31px;\n  color: #101010;\n}\n.main__text {\n  font-weight: 300;\n  font-size: 16px;\n  line-height: 24px;\n  margin: 28px 0 28px 0;\n  color: #101010;\n}\n.main__subheader {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 22px;\n  color: #101010;\n}\n.sidebar__button {\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n  box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);\n  width: 220px;\n  height: 40px;\n  font-weight: bold;\n  font-size: 15px;\n  line-height: 18px;\n  color: #ffffff;\n  border: none !important;\n  margin-top: 50px;\n}\n.sidebar__button:hover {\n  background: linear-gradient(90deg, #b678aa 1.29%, #e28990 100%);\n}\n.main__image {\n  margin-bottom: 44px;\n  width: 100%;\n  height: 331px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Popup.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Popup.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.popup {\n  position: fixed;\n  background: #262626d0;\n  mix-blend-mode: normal;\n  height: 100vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.card {\n  box-sizing: border-box;\n  padding: 18px 65px 38px 65px;\n  width: 570px;\n  background: #ffffff;\n  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);\n}\n.card__label {\n  display: block;\n  position: relative;\n  top: -37px;\n  left: 11px;\n  z-index: 1;\n  transition: all 0.3s ease-out;\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}\n.card__input {\n  box-sizing: border-box;\n  padding: 8.5px 0 0 11px;\n  display: block;\n  position: relative;\n  background: none;\n  border: none;\n  box-shadow: inset 0px 1px 5px rgba(142, 142, 142, 0.5);\n  width: 100%;\n  min-height: 54px !important;\n  max-height: 54px !important;\n  font-size: 16px;\n  z-index: 2;\n  font-weight: 300;\n  font-size: 16px;\n  line-height: 19px;\n  color: #000000;\n}\n.card__input:focus,\n.card__input:valid {\n  outline: none;\n  border: 1px solid #9e9e9e;\n}\nc .card__input:focus + .card__label,\n.card__input:valid + .card__label {\n  top: -50px;\n  font-size: 12px;\n}\n.card__close {\n  float: right;\n  position: relative;\n  left: 54px;\n  top: -7px;\n  cursor: pointer;\n}\n.card__header {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.card__text {\n  font-weight: bold;\n  font-size: 23px;\n  line-height: 28px;\n  text-align: center;\n  color: #464646;\n  margin-bottom: 23px;\n}\n.card__text--highlight {\n  color: #007a02;\n  display: inline-block;\n  margin: 0 5px 0 5px;\n}\n.card__line {\n  background: url(" + escape(__webpack_require__(/*! ../../../public/images/imgs/progress.svg */ "./public/images/imgs/progress.svg")) + ");\n  width: 220px;\n  height: 2px;\n}\n.card__line--unfinished {\n  width: 220px;\n  height: 2px;\n  background-color: #e5e5e5;\n}\n.card__progress {\n  display: flex;\n  flex-direction: row;\n  margin: 11px 0 22px 0;\n}\n.card__button {\n  width: 100% !important;\n  height: 48px !important;\n  margin-top: 0px !important;\n  font-weight: bold !important;\n  font-size: 18px !important;\n}\n.card__step {\n  font-size: 14px;\n  color: rgba(0, 0, 0, 0.5);\n}\n.card__input--error {\n  border: 1px solid #e51323 !important;\n  color: #e51323;\n}\n.card__label--error {\n  color: #e51323;\n}\n", ""]);
 
 // exports
 
@@ -6503,6 +6606,33 @@ function toComment(sourceMap) {
 	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
 	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/url/escape.js":
+/*!***************************************************!*\
+  !*** ./node_modules/css-loader/lib/url/escape.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function escape(url) {
+    if (typeof url !== 'string') {
+        return url
+    }
+    // If url is already wrapped in quotes, remove them
+    if (/^['"].*['"]$/.test(url)) {
+        url = url.slice(1, -1);
+    }
+    // Should url be wrapped?
+    // See https://drafts.csswg.org/css-values-3/#urls
+    if (/["'() \t\n]/.test(url)) {
+        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
+    }
+
+    return url
 }
 
 
@@ -37610,6 +37740,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Popup.vue?vue&type=style&index=0&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Popup.vue?vue&type=style&index=0&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Popup.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Popup.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/lib/addStyles.js":
 /*!****************************************************!*\
   !*** ./node_modules/style-loader/lib/addStyles.js ***!
@@ -38209,132 +38369,272 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "sidebar" }, [
+        _c(
+          "button",
+          {
+            staticClass: "sidebar__button",
+            on: {
+              click: function($event) {
+                return _vm.togglePopup()
+              }
+            }
+          },
+          [_vm._v("Send Me The Tips »")]
+        )
+      ]),
+      _vm._v(" "),
+      _vm.popupOpen
+        ? _c("popup", {
+            on: {
+              close: function($event) {
+                return _vm.togglePopup()
+              }
+            }
+          })
+        : _vm._e()
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "main" }, [
-        _c("div", { staticClass: "main__header" }, [
-          _vm._v(
-            "10 Best Photo Apps For Incredible iPhone Photography (2020 Edition)"
-          )
-        ]),
-        _vm._v(" "),
-        _c("img", {
-          staticClass: "main__line",
-          attrs: { src: __webpack_require__(/*! ../../../public/images/line.svg */ "./public/images/line.svg") }
-        }),
-        _vm._v(" "),
-        _c("p", { staticClass: "main__text" }, [
-          _vm._v(
-            "How do you capture more interesting travel photos with your iPhone? How do you avoid taking the same cliché vacation photos that everyone else takes? I recently interviewed Steffen Geldner – a talented iPhone photographer with a passion for travel. In this article, Steffen reveals 7 tips for shooting beautiful travel photos that will preserve the amazing memories of your trip. Read on to discover how to take better travel photos with your iPhone!"
-          )
-        ]),
-        _vm._v(" "),
-        _c("img", {
-          staticClass: "main__image",
-          attrs: {
-            src: __webpack_require__(/*! ../../../public/images/main__image.png */ "./public/images/main__image.png"),
-            srcset:
-              __webpack_require__(/*! ../../../public/images/main__image@2x.png */ "./public/images/main__image@2x.png") +
-              " 2x, " +
-              __webpack_require__(/*! ../../../public/images/main__image@3x.png */ "./public/images/main__image@3x.png") +
-              " 3x"
-          }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "main__subheader" }, [
-          _vm._v(
-            "1. Research Your Destination To Find The Best Photo Opportunities"
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "main__text" }, [
-          _vm._v(
-            "Before your trip, I recommend researching the destination to find the most interesting photo opportunities."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "main__text" }, [
-          _vm._v(
-            "I always research the location I’m traveling to. I do this extensively and obsessively!"
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "main__text" }, [
-          _vm._v(
-            "It’s up to you how much research you do. But you should definitely spend a bit of time looking up some great places to take pictures."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "main__text" }, [
-          _vm._v("So, what kind of research can you do?")
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "main__text" }, [
-          _vm._v(
-            "First, you could search for photos that other people have taken at the locations you’re planning to visit."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "main__text" }, [
-          _vm._v(
-            "Search on Instagram or Google to get an idea of the kinds of photos people take there."
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "main__subheader" }, [
-          _vm._v(
-            "2. Capture Your Journey To Tell The Complete Story Of Your Travels"
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "main__text" }, [
-          _vm._v(
-            "Travel photography isn’t just about photographing the destination."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "main__text" }, [
-          _vm._v(
-            "For a more complete photographic story, capture your journey to and from the location you’re visiting."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "main__text" }, [
-          _vm._v(
-            "If you’re traveling by plane, try to get a window seat where you have a view of the wing or propeller."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "main__text" }, [
-          _vm._v(
-            "And of course, you could capture a beautiful aerial view of clouds, mountains, or city lights as you’re flying above."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "main__text" }, [
-          _vm._v(
-            "Your journey will often involve several different types of transport. And they all offer great photo opportunities."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "main__text" }, [
-          _vm._v(
-            "Whether you’re traveling by car, taxi, bus, train, boat, or plane, try to capture some interesting photos."
-          )
-        ])
+    return _c("div", { staticClass: "main" }, [
+      _c("div", { staticClass: "main__header" }, [
+        _vm._v(
+          "10 Best Photo Apps For Incredible iPhone Photography (2020 Edition)"
+        )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "sidebar" }, [
-        _c("button", { staticClass: "sidebar__button" }, [
-          _vm._v("Send Me The Tips »")
-        ])
+      _c("img", {
+        staticClass: "main__line",
+        attrs: { src: __webpack_require__(/*! ../../../public/images/imgs/line.svg */ "./public/images/imgs/line.svg") }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "main__text" }, [
+        _vm._v(
+          "How do you capture more interesting travel photos with your iPhone? How do you avoid taking the same cliché vacation photos that everyone else takes? I recently interviewed Steffen Geldner – a talented iPhone photographer with a passion for travel. In this article, Steffen reveals 7 tips for shooting beautiful travel photos that will preserve the amazing memories of your trip. Read on to discover how to take better travel photos with your iPhone!"
+        )
+      ]),
+      _vm._v(" "),
+      _c("img", {
+        staticClass: "main__image",
+        attrs: {
+          src: __webpack_require__(/*! ../../../public/images/imgs/main__image.png */ "./public/images/imgs/main__image.png"),
+          srcset:
+            __webpack_require__(/*! ../../../public/images/imgs/main__image@2x.png */ "./public/images/imgs/main__image@2x.png") +
+            " 2x, " +
+            __webpack_require__(/*! ../../../public/images/imgs/main__image@3x.png */ "./public/images/imgs/main__image@3x.png") +
+            " 3x"
+        }
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "main__subheader" }, [
+        _vm._v(
+          "1. Research Your Destination To Find The Best Photo Opportunities"
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "main__text" }, [
+        _vm._v(
+          "Before your trip, I recommend researching the destination to find the most interesting photo opportunities."
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "main__text" }, [
+        _vm._v(
+          "I always research the location I’m traveling to. I do this extensively and obsessively!"
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "main__text" }, [
+        _vm._v(
+          "It’s up to you how much research you do. But you should definitely spend a bit of time looking up some great places to take pictures."
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "main__text" }, [
+        _vm._v("So, what kind of research can you do?")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "main__text" }, [
+        _vm._v(
+          "First, you could search for photos that other people have taken at the locations you’re planning to visit."
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "main__text" }, [
+        _vm._v(
+          "Search on Instagram or Google to get an idea of the kinds of photos people take there."
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "main__subheader" }, [
+        _vm._v(
+          "2. Capture Your Journey To Tell The Complete Story Of Your Travels"
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "main__text" }, [
+        _vm._v(
+          "Travel photography isn’t just about photographing the destination."
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "main__text" }, [
+        _vm._v(
+          "For a more complete photographic story, capture your journey to and from the location you’re visiting."
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "main__text" }, [
+        _vm._v(
+          "If you’re traveling by plane, try to get a window seat where you have a view of the wing or propeller."
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "main__text" }, [
+        _vm._v(
+          "And of course, you could capture a beautiful aerial view of clouds, mountains, or city lights as you’re flying above."
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "main__text" }, [
+        _vm._v(
+          "Your journey will often involve several different types of transport. And they all offer great photo opportunities."
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "main__text" }, [
+        _vm._v(
+          "Whether you’re traveling by car, taxi, bus, train, boat, or plane, try to capture some interesting photos."
+        )
       ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Popup.vue?vue&type=template&id=a4c6995e&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Popup.vue?vue&type=template&id=a4c6995e& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "popup" }, [
+    _c("div", { staticClass: "card" }, [
+      _c("img", {
+        staticClass: "card__close",
+        attrs: { src: __webpack_require__(/*! ../../../public/images/imgs/x.svg */ "./public/images/imgs/x.svg") },
+        on: {
+          click: function($event) {
+            return _vm.close()
+          }
+        }
+      }),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.inputMail,
+            expression: "inputMail"
+          }
+        ],
+        staticClass: "card__input",
+        class: { "card__input--error": !_vm.valid },
+        attrs: {
+          name: "input",
+          type: "text",
+          required: "",
+          autocomplete: "off"
+        },
+        domProps: { value: _vm.inputMail },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.inputMail = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c(
+        "label",
+        {
+          staticClass: "card__label",
+          class: { "card__label--error": !_vm.valid },
+          attrs: { for: "input" }
+        },
+        [_vm._v(_vm._s(_vm.labelText))]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "card__button sidebar__button",
+          on: {
+            click: function($event) {
+              return _vm.validateForm()
+            }
+          }
+        },
+        [_vm._v("Send Me The Tips »")]
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card__header" }, [
+      _c("div", { staticClass: "card__step" }, [_vm._v("Step 1 of 2")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card__progress" }, [
+        _c("div", { staticClass: "card__line" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "card__line--unfinished" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card__text" }, [
+      _vm._v("\n      Enter Your Email To Get\n      "),
+      _c("div", { staticClass: "card__text--highlight" }, [_vm._v("FREE")]),
+      _vm._v("iPhone Photography Email Tips:\n    ")
     ])
   }
 ]
@@ -50506,10 +50806,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./public/images/line.svg":
-/*!********************************!*\
-  !*** ./public/images/line.svg ***!
-  \********************************/
+/***/ "./public/images/imgs/line.svg":
+/*!*************************************!*\
+  !*** ./public/images/imgs/line.svg ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -50517,10 +50817,10 @@ module.exports = "/images/line.svg?064048d78b13bdb8685f75251299d036";
 
 /***/ }),
 
-/***/ "./public/images/main__image.png":
-/*!***************************************!*\
-  !*** ./public/images/main__image.png ***!
-  \***************************************/
+/***/ "./public/images/imgs/main__image.png":
+/*!********************************************!*\
+  !*** ./public/images/imgs/main__image.png ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -50528,10 +50828,10 @@ module.exports = "/images/main__image.png?845c4b71959b5945c1fc9562a1de4eee";
 
 /***/ }),
 
-/***/ "./public/images/main__image@2x.png":
-/*!******************************************!*\
-  !*** ./public/images/main__image@2x.png ***!
-  \******************************************/
+/***/ "./public/images/imgs/main__image@2x.png":
+/*!***********************************************!*\
+  !*** ./public/images/imgs/main__image@2x.png ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -50539,14 +50839,36 @@ module.exports = "/images/main__image@2x.png?6af6d47b85ad36564a51a9b432aaa986";
 
 /***/ }),
 
-/***/ "./public/images/main__image@3x.png":
-/*!******************************************!*\
-  !*** ./public/images/main__image@3x.png ***!
-  \******************************************/
+/***/ "./public/images/imgs/main__image@3x.png":
+/*!***********************************************!*\
+  !*** ./public/images/imgs/main__image@3x.png ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/main__image@3x.png?484c2c22564cf5d55bcc7c5cc69bbc16";
+module.exports = "/images/main__image@3x.png?d41d8cd98f00b204e9800998ecf8427e";
+
+/***/ }),
+
+/***/ "./public/images/imgs/progress.svg":
+/*!*****************************************!*\
+  !*** ./public/images/imgs/progress.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/progress.svg?a611eb481895d5bd6600b996134a1256";
+
+/***/ }),
+
+/***/ "./public/images/imgs/x.svg":
+/*!**********************************!*\
+  !*** ./public/images/imgs/x.svg ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/x.svg?0c291824c8b7a9a1c548573564467d7e";
 
 /***/ }),
 
@@ -50715,6 +51037,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Popup.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Popup.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Popup_vue_vue_type_template_id_a4c6995e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Popup.vue?vue&type=template&id=a4c6995e& */ "./resources/js/components/Popup.vue?vue&type=template&id=a4c6995e&");
+/* harmony import */ var _Popup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Popup.vue?vue&type=script&lang=js& */ "./resources/js/components/Popup.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Popup_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Popup.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/Popup.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Popup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Popup_vue_vue_type_template_id_a4c6995e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Popup_vue_vue_type_template_id_a4c6995e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Popup.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Popup.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Popup.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Popup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Popup.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Popup.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Popup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Popup.vue?vue&type=style&index=0&lang=css&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/Popup.vue?vue&type=style&index=0&lang=css& ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Popup_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Popup.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Popup.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Popup_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Popup_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Popup_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Popup_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Popup_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Popup.vue?vue&type=template&id=a4c6995e&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Popup.vue?vue&type=template&id=a4c6995e& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Popup_vue_vue_type_template_id_a4c6995e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Popup.vue?vue&type=template&id=a4c6995e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Popup.vue?vue&type=template&id=a4c6995e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Popup_vue_vue_type_template_id_a4c6995e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Popup_vue_vue_type_template_id_a4c6995e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
