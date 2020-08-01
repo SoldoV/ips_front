@@ -11,8 +11,6 @@
         src="../../../public/images/main__image.png"
         srcset="../../../public/images/main__image@2x.png 2x, ../../../public/images/main__image@3x.png 3x"
       >
-      <input type="text" name="input" required autocomplete="off">
-      <label for="input">Please enter your email here</label>
       <div class="main__subheader">1. Research Your Destination To Find The Best Photo Opportunities</div>
       <p
         class="main__text"
@@ -121,48 +119,5 @@ export default {
 .main__image {
   width: 100%;
   height: 331px;
-}
-
-label {
-  display: block;
-  position: relative;
-  top: -37px;
-  left: 11px;
-  z-index: 1;
-  transition: all 0.3s ease-out;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 22px;
-  color: #828282;
-}
-
-input {
-  box-sizing: border-box;
-  padding: 8.5px 0 0 11px;
-  display: block;
-  position: relative;
-  background: none;
-  border: 1px solid #9e9e9e;
-  box-shadow: inset 0px 1px 5px rgba(142, 142, 142, 0.5);
-  width: 100%;
-  min-height: 54px !important;
-  max-height: 54px !important;
-  font-size: 16px;
-  z-index: 2;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 19px;
-  color: #000000;
-}
-
-input:focus,
-input:valid {
-  outline: none;
-}
-
-input:focus + label,
-input:valid + label {
-  top: -54px;
-  font-size: 12px;
 }
 </style>

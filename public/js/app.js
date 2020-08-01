@@ -1964,8 +1964,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log("Component mounted.");
@@ -6416,7 +6414,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n* {\n  font-family: \"Lato\";\n}\n.main {\n  width: 560px;\n}\n.sidebar {\n  margin-left: 70px;\n  width: 270px;\n  height: 640px;\n  background-color: #f5f5f5;\n  display: flex;\n  justify-content: center;\n}\n.container {\n  display: flex;\n  flex-flow: row;\n  justify-content: center;\n}\n.main__header {\n  font-style: normal;\n  font-weight: bold;\n  font-size: 26px;\n  line-height: 31px;\n  color: #101010;\n}\n.main__text {\n  font-weight: 300;\n  font-size: 16px;\n  line-height: 24px;\n  color: #101010;\n}\n.main__subheader {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 22px;\n  color: #101010;\n}\n.sidebar__button {\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n  box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);\n  width: 220px;\n  height: 40px;\n  font-weight: bold;\n  font-size: 15px;\n  line-height: 18px;\n  color: #ffffff;\n  border: none !important;\n  margin-top: 50px;\n}\n.sidebar__button:hover {\n  background: linear-gradient(90deg, #b678aa 1.29%, #e28990 100%);\n}\n.main__image {\n  width: 100%;\n  height: 331px;\n}\nlabel {\n  display: block;\n  position: relative;\n  top: -37px;\n  left: 11px;\n  z-index: 1;\n  transition: all 0.3s ease-out;\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 22px;\n  color: #828282;\n}\ninput {\n  box-sizing: border-box;\n  padding: 8.5px 0 0 11px;\n  display: block;\n  position: relative;\n  background: none;\n  border: 1px solid #9e9e9e;\n  box-shadow: inset 0px 1px 5px rgba(142, 142, 142, 0.5);\n  width: 100%;\n  min-height: 54px !important;\n  max-height: 54px !important;\n  font-size: 16px;\n  z-index: 2;\n  font-weight: 300;\n  font-size: 16px;\n  line-height: 19px;\n  color: #000000;\n}\ninput:focus,\ninput:valid {\n  outline: none;\n}\ninput:focus + label,\ninput:valid + label {\n  top: -54px;\n  font-size: 12px;\n}\n", ""]);
+exports.push([module.i, "\n* {\n  font-family: \"Lato\";\n}\n.main {\n  width: 560px;\n}\n.sidebar {\n  margin-left: 70px;\n  width: 270px;\n  height: 640px;\n  background-color: #f5f5f5;\n  display: flex;\n  justify-content: center;\n}\n.container {\n  display: flex;\n  flex-flow: row;\n  justify-content: center;\n}\n.main__header {\n  font-style: normal;\n  font-weight: bold;\n  font-size: 26px;\n  line-height: 31px;\n  color: #101010;\n}\n.main__text {\n  font-weight: 300;\n  font-size: 16px;\n  line-height: 24px;\n  color: #101010;\n}\n.main__subheader {\n  font-weight: bold;\n  font-size: 18px;\n  line-height: 22px;\n  color: #101010;\n}\n.sidebar__button {\n  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);\n  box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);\n  width: 220px;\n  height: 40px;\n  font-weight: bold;\n  font-size: 15px;\n  line-height: 18px;\n  color: #ffffff;\n  border: none !important;\n  margin-top: 50px;\n}\n.sidebar__button:hover {\n  background: linear-gradient(90deg, #b678aa 1.29%, #e28990 100%);\n}\n.main__image {\n  width: 100%;\n  height: 331px;\n}\n", ""]);
 
 // exports
 
@@ -38248,19 +38246,6 @@ var staticRenderFns = [
               " 3x"
           }
         }),
-        _vm._v(" "),
-        _c("input", {
-          attrs: {
-            type: "text",
-            name: "input",
-            required: "",
-            autocomplete: "off"
-          }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "input" } }, [
-          _vm._v("Please enter your email here")
-        ]),
         _vm._v(" "),
         _c("div", { staticClass: "main__subheader" }, [
           _vm._v(
