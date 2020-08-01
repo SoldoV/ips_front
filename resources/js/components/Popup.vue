@@ -59,19 +59,21 @@ export default {
 
 <style>
 .popup {
+  top: 0px;
   position: fixed;
   background: #262626d0;
   mix-blend-mode: normal;
-  height: 100vh;
-  width: 100vw;
+  height: calc(100vh + 2px);
+  width: calc(100vw + 2px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .card {
+  position: relative;
   box-sizing: border-box;
   padding: 18px 65px 38px 65px;
-  width: 570px;
+  max-width: 570px;
   background: #ffffff;
   box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);
 }
@@ -111,19 +113,19 @@ export default {
   outline: none;
   border: 1px solid #9e9e9e;
 }
-c .card__input:focus + .card__label,
+.card__input:focus + .card__label,
 .card__input:valid + .card__label {
   top: -50px;
   font-size: 12px;
 }
 .card__close {
-  float: right;
-  position: relative;
-  left: 54px;
-  top: -7px;
+  position: absolute;
+  right: 11px;
+  top: 11px;
   cursor: pointer;
 }
 .card__header {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,17 +146,19 @@ c .card__input:focus + .card__label,
   margin: 0 5px 0 5px;
 }
 .card__line {
-  background: url("../../../public/images/imgs/progress.svg");
-  width: 220px;
+  background-size: cover;
+  background: url("../../../public/images/imgs/progress.png");
+  width: 50%;
   height: 2px;
 }
 .card__line--unfinished {
-  width: 220px;
+  width: 50%;
   height: 2px;
   background-color: #e5e5e5;
 }
 
 .card__progress {
+  width: 100%;
   display: flex;
   flex-direction: row;
   margin: 11px 0 22px 0;
@@ -162,7 +166,7 @@ c .card__input:focus + .card__label,
 .card__button {
   width: 100% !important;
   height: 48px !important;
-  margin-top: 0px !important;
+  margin: 0px !important;
   font-weight: bold !important;
   font-size: 18px !important;
 }
@@ -176,5 +180,25 @@ c .card__input:focus + .card__label,
 }
 .card__label--error {
   color: #e51323;
+}
+
+@media only screen and (max-width: 700px) {
+  .card__button {
+    height: 45px;
+  }
+  .card {
+    margin: 0 11px 0 11px !important;
+  }
+  .card__text {
+    font-size: 20px;
+  }
+  .card__label {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .card {
+    padding: 13px 18px 24px 18px;
+  }
 }
 </style>
