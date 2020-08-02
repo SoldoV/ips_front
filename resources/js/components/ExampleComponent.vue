@@ -4,7 +4,7 @@
       <div class="main__header">10 Best Photo Apps For Incredible iPhone Photography (2020 Edition)</div>
       <img src="../../../public/images/imgs/Divider.png" class="main__line">
       <p
-        class="main__text"
+        class="main__text main__subtext"
       >How do you capture more interesting travel photos with your iPhone? How do you avoid taking the same cliché vacation photos that everyone else takes? I recently interviewed Steffen Geldner – a talented iPhone photographer with a passion for travel. In this article, Steffen reveals 7 tips for shooting beautiful travel photos that will preserve the amazing memories of your trip. Read on to discover how to take better travel photos with your iPhone!</p>
       <img
         class="main__image"
@@ -72,127 +72,6 @@ export default {
 };
 </script>
 
-<style>
-* {
-  font-family: "Lato";
-}
-.main__line {
-  height: 2px;
-  width: 100%;
-}
-.main {
-  width: 560px;
-  margin-top: 76px;
-  margin-bottom: 138px;
-}
-.sidebar {
-  margin: 154px 0 0 70px;
-  width: 270px;
-  height: 640px;
-  background-color: #f5f5f5;
-  display: flex;
-  justify-content: center;
-}
-.container {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-}
-.main__header {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 31px;
-  color: #101010;
-}
-.main__text {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 18px 0 18px 0;
-  color: #101010;
-}
-.main__subtext {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 28px 0 28px 0;
-  color: #101010;
-}
-.main__subheader {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-  color: #101010;
-}
-.sidebar__button {
-  background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);
-  box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);
-  width: 220px;
-  height: 40px;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 18px;
-  color: #ffffff;
-  border: none !important;
-  margin-top: 50px;
-}
-.sidebar__button:hover {
-  background: linear-gradient(90deg, #b678aa 1.29%, #e28990 100%);
-}
-.main__image {
-  max-width: 100%;
-  margin-bottom: 44px;
-}
-@media only screen and (max-width: 940px) {
-  .container {
-    flex-flow: column;
-    align-items: center;
-  }
-  .main {
-    width: 80%;
-    margin-bottom: 0px;
-  }
-  .main__line {
-    width: 100%;
-  }
-  .sidebar {
-    height: 426px;
-    width: 80%;
-    margin: 11px 0 37px 0;
-  }
-}
-
-@media only screen and (max-width: 560px) {
-  .sidebar__button {
-    font-size: 20px;
-    height: 50px;
-    width: 100%;
-    margin: 34px 29px 0 29px;
-  }
-  .main__second-subheader {
-    margin-top: 43px;
-  }
-  .main__text {
-    margin: 22px 0 22px 0;
-  }
-  .main__image {
-    margin-left: -18px;
-    max-width: 100vw;
-    margin-bottom: 31px;
-  }
-  .container {
-    margin: 0 18px 0 18px;
-  }
-  .main__line {
-    width: 100%;
-  }
-  .main {
-    margin-top: 25px;
-    width: 100%;
-  }
-  .sidebar {
-    width: 100%;
-  }
-}
+<style lang="scss">
+@import "../../sass/_exampleComponent.scss";
 </style>

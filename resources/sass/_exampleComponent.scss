@@ -1,0 +1,147 @@
+@import "variables";
+
+* {
+    font-family: "Lato";
+}
+
+.container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+
+    .main {
+        width: 560px;
+        margin-top: 76px;
+        margin-bottom: 138px;
+
+        &__line {
+            height: 2px;
+            width: 100%;
+        }
+
+        &__header {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 26px;
+            line-height: 31px;
+            color: $text-primary;
+        }
+
+        &__text {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 18px 0 18px 0;
+            color: $text-primary;
+        }
+
+        &__subtext {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 28px 0 28px 0;
+            color: $text-primary;
+        }
+
+        &__subheader {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            color: $text-primary;
+        }
+
+        &__image {
+            max-width: 100%;
+            margin-bottom: 44px;
+        }
+    }
+
+    .sidebar {
+        margin: 154px 0 0 70px;
+        width: 270px;
+        height: 640px;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+
+        &__button {
+            background: linear-gradient(90deg, #ac519c 0.83%, #e5424f 100%);
+            box-shadow: 0px 3px 10px rgba(104, 104, 104, 0.5);
+            width: 220px;
+            height: 40px;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 18px;
+            color: $bg-primary;
+            border: none !important;
+            margin-top: 50px;
+        }
+
+        &__button:hover {
+            background: linear-gradient(90deg, #b678aa 1.29%, #e28990 100%);
+        }
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .container {
+        flex-flow: column;
+        align-items: center;
+
+        .main {
+            width: 80%;
+            margin-bottom: 0px;
+
+            &__line {
+                width: 100%;
+            }
+        }
+
+        .sidebar {
+            height: 426px;
+            width: 80%;
+            margin: 11px 0 37px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .container {
+        margin: 0 18px 0 18px;
+
+        .main {
+            margin-top: 25px;
+            width: 100%;
+
+            &__line {
+                width: 100%;
+            }
+
+            &__second-subheader {
+                margin-top: 43px;
+            }
+
+            &__image {
+                margin-left: -18px;
+                max-width: 100vw;
+                margin-bottom: 31px;
+            }
+
+            &__subtext {
+                margin: 25px 0 25px 0;
+            }
+        }
+
+        .sidebar {
+            width: 100%;
+
+            &__button {
+                font-size: 20px;
+                height: 50px;
+                width: 100%;
+                margin: 34px 29px 0 29px;
+            }
+        }
+    }
+}

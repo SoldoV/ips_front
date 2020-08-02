@@ -1,0 +1,165 @@
+@import 'variables';
+
+.popup {
+    top: 0px;
+    position: fixed;
+    background: #262626d0;
+    mix-blend-mode: normal;
+    height: calc(100vh + 2px);
+    width: calc(100vw + 2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        position: relative;
+        box-sizing: border-box;
+        padding: 18px 65px 38px 65px;
+        max-width: 570px;
+        background: $bg-primary;
+        box-shadow: 0px 0px 60px $grey;
+
+        &__label {
+            display: block;
+            position: relative;
+            top: -37px;
+            left: 11px;
+            z-index: 1;
+            transition: all 0.3s ease-out;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 22px;
+            color: #828282;
+        }
+
+        &__input {
+            box-sizing: border-box;
+            padding: 8.5px 0 0 11px;
+            display: block;
+            position: relative;
+            background: none;
+            border: none;
+            box-shadow: inset 0px 1px 5px rgba(142, 142, 142, 0.5);
+            width: 100%;
+            min-height: 54px !important;
+            max-height: 54px !important;
+            font-size: 16px;
+            z-index: 2;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+        }
+
+        &__input:focus,
+        &__input:valid {
+            outline: none;
+            border: 1px solid #9e9e9e;
+        }
+
+        &__input:focus+.card__label,
+        &__input:valid+.card__label {
+            top: -50px;
+            font-size: 12px;
+        }
+
+        &__close {
+            position: absolute;
+            right: 11px;
+            top: 11px;
+            cursor: pointer;
+        }
+
+        &__header {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__text {
+            font-weight: bold;
+            font-size: 23px;
+            line-height: 28px;
+            text-align: center;
+            color: #464646;
+            margin-bottom: 23px;
+        }
+
+        &__text--highlight {
+            color: #007a02;
+            display: inline-block;
+            margin: 0 5px 0 5px;
+        }
+
+        &__line {
+            background-size: cover;
+            background: url("../../../public/images/imgs/progress.png");
+            width: 50%;
+            height: 2px;
+        }
+
+        &__line--unfinished {
+            width: 50%;
+            height: 2px;
+            background-color: #e5e5e5;
+        }
+
+        &__progress {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin: 11px 0 22px 0;
+        }
+
+        &__button {
+            width: 100% !important;
+            height: 48px !important;
+            margin: 0px !important;
+            font-weight: bold !important;
+            font-size: 18px !important;
+        }
+
+        &__step {
+            font-size: 14px;
+            color: $grey;
+        }
+
+        &__input--error {
+            border: 1px solid $error !important;
+            color: $error;
+        }
+
+        &__label--error {
+            color: $error;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .popup {
+        .card {
+            margin: 0 11px 0 11px !important;
+
+            &__button {
+                height: 45px !important;
+            }
+
+            &__text {
+                font-size: 20px;
+            }
+
+            &__label {
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .card {
+        padding: 13px 18px 24px 18px !important;
+    }
+}
